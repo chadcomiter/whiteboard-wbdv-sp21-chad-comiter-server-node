@@ -1,0 +1,14 @@
+{
+  "name": "whiteboard-wbdv-sp21-chad-comiter-server-node",
+  "version": "1.0.0",
+  "description": "Node server for webdev",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
