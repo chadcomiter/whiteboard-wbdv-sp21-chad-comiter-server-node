@@ -1,5 +1,13 @@
 const express = require('express')
-const app = express()
+const app = express();
+
+var bodyParser = require('body-parser')
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+require('./controllers/quizzes-controller')(app)
+require('./controllers/questions-controller')(app)
+require('./controllers/quiz-attempts-controller')(app)
+
 
 app.use(
     function(req, res, next){
@@ -11,7 +19,7 @@ app.use(
     }
 );
 
-const quizController = require('./controllers/quiz-controller')
+const quizController = require('./controllers/quizzes-controller')
 quizController(app)
 
 const questionController = require('./controllers/question-controller')
